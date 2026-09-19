@@ -1,0 +1,95 @@
+{
+  "meta.title": "Duo — un talkie-walkie pour ton groupe",
+  "meta.description": "Duo permet à des groupes d'amis privés de se signaler, de parler en direct et de discuter. Gratuit sur Google Play.",
+
+  "nav.privacy": "Confidentialité",
+  "nav.terms": "Conditions",
+
+  "hero.tagline": "Un <span class=\"accent\">talkie-walkie</span> pour ton groupe.",
+  "hero.sub": "Groupes privés. Un signal quand tu veux parler. Voix en direct quand quelqu'un est là. Le chat le reste du temps.",
+  "hero.scroll": "défiler",
+  "play.alt": "Télécharger Duo sur Google Play",
+
+  "features.kicker": "Ce qu'il y a dedans",
+  "features.title": "Pas un chat de groupe. Pas une appli d'appels.",
+  "features.body": "Duo se situe entre les deux — toujours actif, jamais insistant, pensé pour les gens à qui tu parles déjà tous les jours.",
+
+  "features.groups.title": "Groupes",
+  "features.groups.body": "Groupes privés. Invite par lien ou par code PIN — pas de salons publics, pas d'inconnus.",
+
+  "features.nudges.title": "Signaux",
+  "features.nudges.body": "Envoie un signal au groupe quand tu veux parler. Fonctionne même si Duo n'est pas ouvert chez eux.",
+
+  "features.voice.title": "Voix en direct",
+  "features.voice.body": "Appuie pour parler. Ceux qui sont disponibles peuvent se joindre, sans appel programmé.",
+
+  "features.chat.title": "Chat",
+  "features.chat.body": "Écris quand personne n'est au micro. Même groupe, même fil.",
+
+  "usp.kicker": "Pourquoi Duo",
+  "usp.title": "Conçu pour le groupe à qui tu parles vraiment",
+  "usp.body": "Ni un fil d'actualité de plus, ni un lien d'appel de plus. Juste tes proches, toujours à un signal de distance.",
+
+  "usp.1.num": "01",
+  "usp.1.title": "Toujours joignable",
+  "usp.1.body": "Les signaux arrivent même quand Duo est fermé — plus de « tu es réveillé ? » sans réponse.",
+
+  "usp.2.num": "02",
+  "usp.2.title": "Aucune pression",
+  "usp.2.body": "C'est un signal, pas une invitation à un appel. Réponds quand tu es libre, ou pas.",
+
+  "usp.3.num": "03",
+  "usp.3.title": "Juste tes proches",
+  "usp.3.body": "Uniquement des groupes privés. Pas de salons publics, pas de fil de découverte, pas d'inconnus.",
+
+  "cta.title": "Télécharger Duo",
+  "cta.body": "Gratuit sur Android. Disponible sur Google Play.",
+
+  "footer.copy": "© 2026 Duo",
+
+  "legal.privacy.title": "Politique de confidentialité",
+  "legal.terms.title": "Conditions d'utilisation",
+  "legal.updated": "Dernière mise à jour : 12 juillet 2026",
+
+  "terms.1.title": "1. Acceptation des conditions",
+  "terms.1.body": "En téléchargeant, en accédant à ou en utilisant Duo, tu acceptes ces Conditions d'utilisation. Si tu n'es pas d'accord, n'utilise pas l'application.",
+  "terms.2.title": "2. Le service",
+  "terms.2.body": "Duo permet aux personnes de créer ou de rejoindre des groupes privés et d'échanger de l'audio vocal en direct. La disponibilité, la qualité audio et la livraison en arrière-plan peuvent dépendre de l'accès au réseau, des paramètres de l'appareil, des autorisations et des services tiers. Le service est fourni tel que disponible.",
+  "terms.3.title": "3. Tes responsabilités",
+  "terms.3.body": "Tu es responsable de l'activité associée à ton installation et de la confidentialité des codes d'invitation. Tu dois avoir le droit de partager tout nom, photo de profil, voix ou autre contenu que tu fournis. N'utilise pas Duo pour harceler autrui, violer sa vie privée, usurper une identité, enfreindre la loi ou perturber le service.",
+  "terms.4.title": "4. Voix et autorisations",
+  "terms.4.body": "Duo nécessite l'accès au microphone pour transmettre la voix en direct. Tu contrôles quand la transmission commence via la commande de conversation dans l'application. Des autorisations de notifications et d'activité en arrière-plan peuvent être demandées pour prendre en charge la disponibilité et les fonctions audio. Tu peux modifier les autorisations dans les paramètres de ton appareil.",
+  "terms.5.title": "5. Services tiers",
+  "terms.5.body": "Duo s'appuie sur des prestataires de services pour l'authentification, le stockage des données, la diffusion des médias, l'hébergement des photos de profil et l'infrastructure. Leurs services peuvent être régis par des conditions distinctes et être occasionnellement indisponibles.",
+  "terms.6.title": "6. Suspension et résiliation",
+  "terms.6.body": "Nous pouvons restreindre ou mettre fin à l'accès lorsque cela est raisonnablement nécessaire pour protéger les utilisateurs, respecter la loi, prévenir les abus ou maintenir le service. Tu peux arrêter d'utiliser Duo à tout moment et supprimer l'application de ton appareil.",
+  "terms.7.title": "7. Avertissements et responsabilité",
+  "terms.7.body": "Dans la mesure permise par la loi, Duo est fourni sans garantie de fonctionnement ininterrompu, sans erreur ou sécurisé. Nous ne sommes pas responsables des dommages indirects, accessoires, spéciaux, consécutifs ou punitifs résultant de l'utilisation de l'application. Rien dans ces conditions ne limite les droits ou la responsabilité qui ne peuvent être légalement limités.",
+  "terms.8.title": "8. Modifications",
+  "terms.8.body": "Nous pouvons mettre à jour ces conditions à mesure que le service évolue. La date de mise à jour apparaîtra en haut de cette page. Continuer à utiliser l'application après une mise à jour signifie que tu acceptes les conditions révisées.",
+  "terms.9.title": "9. Contact",
+  "terms.9.body": "Les questions concernant ces conditions peuvent être envoyées à duowalkie@gmail.com.",
+
+  "privacy.1.title": "1. Aperçu",
+  "privacy.1.body": "Cette politique de confidentialité explique ce que Duo collecte, pourquoi ces informations sont utilisées et les choix qui s'offrent à toi lors de l'utilisation de l'application.",
+  "privacy.2.title": "2. Informations que nous collectons",
+  "privacy.2.body": "Nous collectons ton identifiant de compte authentifié par Google et ton adresse e-mail, ton nom d'affichage, ta photo de profil facultative, les informations sur l'appartenance et les invitations aux groupes, les paramètres de l'application, les identifiants de l'appareil et de la version de l'application, l'état des autorisations, l'état de disponibilité et les diagnostics de base du service. Lorsque tu utilises la voix en direct, l'audio du microphone est transmis aux autres membres actifs de ton groupe.",
+  "privacy.3.title": "3. Comment les informations sont utilisées",
+  "privacy.3.body": "Les informations sont utilisées pour créer ton identité dans l'application, afficher ton profil aux membres du groupe, gérer les groupes et les invitations, connecter les sessions de voix en direct, mémoriser les préférences, maintenir la disponibilité, diagnostiquer la fiabilité, prévenir les abus, et exploiter et améliorer Duo.",
+  "privacy.4.title": "4. Audio",
+  "privacy.4.body": "La voix en direct est transmise afin que les membres du groupe puissent t'entendre. Duo n'est pas conçu pour enregistrer ou stocker le contenu de tes conversations en direct. Les prestataires de services peuvent traiter les métadonnées réseau et de connexion nécessaires à la diffusion de l'audio.",
+  "privacy.5.title": "5. Prestataires de services",
+  "privacy.5.body": "Duo utilise des prestataires tels que Google Firebase pour l'authentification et les données de l'application, Cloudinary pour l'hébergement des photos de profil, LiveKit pour l'audio en temps réel, et des prestataires d'hébergement pour les services applicatifs. Ces prestataires traitent les informations en notre nom, selon leurs propres pratiques de confidentialité et de sécurité.",
+  "privacy.6.title": "6. Partage",
+  "privacy.6.body": "Ton nom d'affichage, ta photo de profil, ta disponibilité et ta voix en direct sont partagés avec les membres des groupes que tu rejoins. Nous pouvons également divulguer des informations à des prestataires de services, pour respecter la loi ou une procédure légale valide, pour protéger les utilisateurs et le service, ou dans le cadre d'un transfert d'activité. Nous ne vendons pas d'informations personnelles.",
+  "privacy.7.title": "7. Conservation et sécurité",
+  "privacy.7.body": "Nous ne conservons les informations que le temps raisonnablement nécessaire pour fournir le service, respecter les obligations légales, résoudre les litiges et protéger l'application. Nous utilisons des mesures de protection raisonnables, mais aucun service en réseau ne peut garantir une sécurité absolue.",
+  "privacy.8.title": "8. Tes choix",
+  "privacy.8.body": "Tu peux modifier ton nom d'affichage, ta photo de profil, les préférences de l'application et les autorisations de l'appareil. Tu peux quitter des groupes, te déconnecter ou supprimer ton compte depuis les paramètres. Les demandes d'accès aux informations peuvent être envoyées à duowalkie@gmail.com. Nous pourrions avoir besoin d'informations identifiant ton installation de l'application pour traiter une demande.",
+  "privacy.9.title": "9. Enfants",
+  "privacy.9.body": "Duo ne s'adresse pas aux enfants de moins de 13 ans, ni à l'âge minimum requis par la loi locale. Nous ne collectons pas sciemment d'informations personnelles auprès d'enfants n'ayant pas atteint cet âge.",
+  "privacy.10.title": "10. Traitement international",
+  "privacy.10.body": "Les informations peuvent être traitées dans des pays autres que le tien. Lorsque cela est nécessaire, des garanties appropriées sont utilisées pour les transferts internationaux.",
+  "privacy.11.title": "11. Modifications et contact",
+  "privacy.11.body": "Nous pouvons mettre à jour cette politique à mesure que Duo évolue. La date de mise à jour apparaîtra ci-dessus. Les questions et demandes relatives à la confidentialité peuvent être envoyées à duowalkie@gmail.com."
+}

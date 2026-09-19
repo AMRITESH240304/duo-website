@@ -1,0 +1,95 @@
+{
+  "meta.title": "Duo — a walkie-talkie for your group",
+  "meta.description": "Duo lets private friend groups nudge, talk live, and chat. Free on Google Play.",
+
+  "nav.privacy": "Privacy",
+  "nav.terms": "Terms",
+
+  "hero.tagline": "A <span class=\"accent\">walkie-talkie</span> for your group.",
+  "hero.sub": "Private groups. Nudges when you want to talk. Live voice when someone's around. Chat the rest of the time.",
+  "hero.scroll": "scroll",
+  "play.alt": "Get Duo on Google Play",
+
+  "features.kicker": "What's inside",
+  "features.title": "Not a group chat. Not a call app.",
+  "features.body": "Duo sits in between — always on, never demanding, and built for the people you already talk to every day.",
+
+  "features.groups.title": "Groups",
+  "features.groups.body": "Private groups. Invite with a link or a PIN — no public rooms, no strangers.",
+
+  "features.nudges.title": "Nudges",
+  "features.nudges.body": "Ping the group when you want to talk. Works even if Duo isn't open on their end.",
+
+  "features.voice.title": "Live voice",
+  "features.voice.body": "Push to talk. Whoever's around can hop on, no scheduled call needed.",
+
+  "features.chat.title": "Chat",
+  "features.chat.body": "Text when nobody's on the mic. Same group, same thread.",
+
+  "usp.kicker": "Why Duo",
+  "usp.title": "Built for the group you actually talk to",
+  "usp.body": "Not another feed, not another call link. Just your people, always one nudge away.",
+
+  "usp.1.num": "01",
+  "usp.1.title": "Always reachable",
+  "usp.1.body": "Nudges land even when Duo is closed — no missed \"you up?\" texts.",
+
+  "usp.2.num": "02",
+  "usp.2.title": "No pressure to perform",
+  "usp.2.body": "It's a nudge, not a call invite. Answer when you're free, or don't.",
+
+  "usp.3.num": "03",
+  "usp.3.title": "Just your people",
+  "usp.3.body": "Private groups only. No public rooms, no discovery feed, no strangers.",
+
+  "cta.title": "Get Duo",
+  "cta.body": "Free on Android. Download from Google Play.",
+
+  "footer.copy": "© 2026 Duo",
+
+  "legal.privacy.title": "Privacy Policy",
+  "legal.terms.title": "Terms & Conditions",
+  "legal.updated": "Last updated: July 12, 2026",
+
+  "terms.1.title": "1. Acceptance of terms",
+  "terms.1.body": "By downloading, accessing, or using Duo, you agree to these Terms & Conditions. If you do not agree, do not use the app.",
+  "terms.2.title": "2. The service",
+  "terms.2.body": "Duo lets people create or join private groups and exchange live voice audio. Availability, audio quality, and background delivery can depend on network access, device settings, permissions, and third-party services. The service is provided on an as-available basis.",
+  "terms.3.title": "3. Your responsibilities",
+  "terms.3.body": "You are responsible for activity associated with your installation and for keeping invite codes private. You must have the right to share any name, profile picture, voice, or other content you provide. Do not use Duo to harass others, violate their privacy, impersonate someone, break the law, or interfere with the service.",
+  "terms.4.title": "4. Voice and permissions",
+  "terms.4.body": "Duo requires microphone access to transmit live voice. You control when transmission starts through the in-app talk control. Notification and background permissions may be requested to support availability and audio features. You can change permissions in your device settings.",
+  "terms.5.title": "5. Third-party services",
+  "terms.5.body": "Duo relies on service providers for authentication, data storage, media delivery, profile-image hosting, and infrastructure. Their services may be governed by separate terms and may occasionally be unavailable.",
+  "terms.6.title": "6. Suspension and termination",
+  "terms.6.body": "We may restrict or end access when reasonably necessary to protect users, comply with law, prevent abuse, or maintain the service. You may stop using Duo at any time and remove the app from your device.",
+  "terms.7.title": "7. Disclaimers and liability",
+  "terms.7.body": "To the extent permitted by law, Duo is provided without warranties of uninterrupted, error-free, or secure operation. We are not liable for indirect, incidental, special, consequential, or punitive damages arising from use of the app. Nothing in these terms limits rights or liability that cannot legally be limited.",
+  "terms.8.title": "8. Changes",
+  "terms.8.body": "We may update these terms as the service changes. The updated date will appear at the top of this page. Continued use after an update means you accept the revised terms.",
+  "terms.9.title": "9. Contact",
+  "terms.9.body": "Questions about these terms can be sent to duowalkie@gmail.com.",
+
+  "privacy.1.title": "1. Overview",
+  "privacy.1.body": "This Privacy Policy explains what Duo collects, why it is used, and the choices available to you when you use the app.",
+  "privacy.2.title": "2. Information we collect",
+  "privacy.2.body": "We collect your Google-authenticated account identifier and email address, display name, optional profile picture, group membership and invite information, app settings, device and app-version identifiers, permission status, availability state, and basic service diagnostics. When you use live voice, microphone audio is transmitted to the other active members of your group.",
+  "privacy.3.title": "3. How information is used",
+  "privacy.3.body": "Information is used to create your app identity, show your profile to group members, manage groups and invitations, connect live voice sessions, remember preferences, maintain availability, diagnose reliability, prevent misuse, and operate and improve Duo.",
+  "privacy.4.title": "4. Audio",
+  "privacy.4.body": "Live voice is transmitted so group members can hear you. Duo is not designed to record or store the content of your live conversations. Service providers may process network and connection metadata needed to deliver the audio.",
+  "privacy.5.title": "5. Service providers",
+  "privacy.5.body": "Duo uses providers including Google Firebase for authentication and app data, Cloudinary for profile-picture hosting, LiveKit for real-time audio, and hosting providers for application services. These providers process information on our behalf under their own privacy and security practices.",
+  "privacy.6.title": "6. Sharing",
+  "privacy.6.body": "Your display name, profile picture, availability, and live voice are shared with members of groups you join. We may also disclose information to service providers, to comply with law or valid legal process, to protect users and the service, or as part of a business transfer. We do not sell personal information.",
+  "privacy.7.title": "7. Retention and security",
+  "privacy.7.body": "We retain information only for as long as reasonably needed to provide the service, meet legal obligations, resolve disputes, and protect the app. We use reasonable safeguards, but no networked service can guarantee absolute security.",
+  "privacy.8.title": "8. Your choices",
+  "privacy.8.body": "You may change your display name, profile picture, app preferences, and device permissions. You may leave groups, log out, or delete your account from Settings. Requests to access information can be sent to duowalkie@gmail.com. We may need information that identifies your app installation to complete a request.",
+  "privacy.9.title": "9. Children",
+  "privacy.9.body": "Duo is not directed to children under 13, or the minimum age required by local law. We do not knowingly collect personal information from children below that age.",
+  "privacy.10.title": "10. International processing",
+  "privacy.10.body": "Information may be processed in countries other than your own. Where required, appropriate safeguards are used for international transfers.",
+  "privacy.11.title": "11. Changes and contact",
+  "privacy.11.body": "We may update this policy as Duo changes. The updated date will appear above. Privacy questions and requests can be sent to duowalkie@gmail.com."
+}
