@@ -12,19 +12,19 @@
 
   "features.kicker": "What's inside",
   "features.title": "Not a group chat. Not a call app.",
-  "features.body": "Duo sits in between — always on, never demanding, and built for the people you already talk to every day.",
+  "features.body": "Private groups → nudge to talk → live walkie voice → chat when it's quiet.",
 
   "features.groups.title": "Groups",
-  "features.groups.body": "Private groups. Invite with a link or a PIN — no public rooms, no strangers.",
+  "features.groups.body": "Your circle only — join by link or PIN.",
 
   "features.nudges.title": "Nudges",
-  "features.nudges.body": "Ping the group when you want to talk. Works even if Duo isn't open on their end.",
+  "features.nudges.body": "Tap the group awake, even with the app closed.",
 
   "features.voice.title": "Live voice",
-  "features.voice.body": "Push to talk. Whoever's around can hop on, no scheduled call needed.",
+  "features.voice.body": "Hold to talk — whoever's around hears you.",
 
   "features.chat.title": "Chat",
-  "features.chat.body": "Text when nobody's on the mic. Same group, same thread.",
+  "features.chat.body": "Text for when nobody's on the mic.",
 
   "usp.kicker": "Why Duo",
   "usp.title": "Built for the group you actually talk to",

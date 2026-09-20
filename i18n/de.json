@@ -12,19 +12,19 @@
 
   "features.kicker": "Was drinsteckt",
   "features.title": "Kein Gruppenchat. Kein Anruf-Tool.",
-  "features.body": "Duo liegt dazwischen — immer an, nie aufdringlich, gemacht für die Leute, mit denen du sowieso jeden Tag sprichst.",
+  "features.body": "Private Gruppen → anstupsen → Live-Walkie-Sprache → Chat, wenn's still ist.",
 
   "features.groups.title": "Gruppen",
-  "features.groups.body": "Private Gruppen. Einladen per Link oder PIN — keine öffentlichen Räume, keine Fremden.",
+  "features.groups.body": "Nur dein Kreis — per Link oder PIN beitreten.",
 
   "features.nudges.title": "Nudges",
-  "features.nudges.body": "Stups die Gruppe an, wenn du reden willst. Funktioniert auch, wenn Duo bei ihnen nicht offen ist.",
+  "features.nudges.body": "Stups die Gruppe wach, auch bei geschlossener App.",
 
   "features.voice.title": "Live-Sprache",
-  "features.voice.body": "Push-to-talk. Wer gerade da ist, kann einsteigen — kein geplanter Anruf nötig.",
+  "features.voice.body": "Gedrückt halten und reden — wer da ist, hört dich.",
 
   "features.chat.title": "Chat",
-  "features.chat.body": "Schreib, wenn niemand am Mikro ist. Gleiche Gruppe, gleicher Thread.",
+  "features.chat.body": "Schreiben, wenn niemand am Mikro ist.",
 
   "usp.kicker": "Warum Duo",
   "usp.title": "Für die Gruppe gemacht, mit der du wirklich sprichst",

@@ -24,43 +24,53 @@
 
   <header class="site-header">
     <div class="wrap">
-      <a class="brand" href="index.html">
-        <img src="assets/img/logo.png" alt="Duo" />
-        Duo
+      <a class="brand" href="index.html" aria-label="Duo — home">
+        <img src="assets/img/logo.png" alt="Duo" width="500" height="500" />
       </a>
-      <div class="header-actions">
-        <nav class="footer-links" style="display:none" aria-hidden="true"></nav>
-        <div class="lang-switch">
-          <button type="button" class="lang-current">English ▾</button>
-          <div class="lang-menu"></div>
-        </div>
-      </div>
     </div>
   </header>
 
   <!-- ================= HERO ================= -->
   <section class="hero">
-    <div class="float-layer" aria-hidden="true"></div>
-
     <div class="wrap hero-stage">
       <h1 class="hero-tagline" data-i18n="hero.tagline">
         A <span class="accent">walkie-talkie</span> for your group.
       </h1>
 
-      <div class="phone-shell" aria-hidden="true">
-        <div class="phone-notch"></div>
-        <div class="phone-screen">
-          <!-- Replace with the real product capture. Autoplay/muted/loop so
-               it behaves like a GIF without the file-size cost. -->
-          <video autoplay muted loop playsinline poster="assets/img/logo.png">
-            <source src="assets/img/app-demo.mp4" type="video/mp4" />
-          </video>
-        </div>
-      </div>
-
       <p class="hero-sub" data-i18n="hero.sub">
         Private groups. Nudges when you want to talk. Live voice when someone's around. Chat the rest of the time.
       </p>
+
+      <!-- The phone is the anchor: stickers orbit it, so they can never
+           land on a heading or on the frame itself. -->
+      <div class="phone-orbit">
+        <div class="orbit" aria-hidden="true">
+          <img class="floatie o-l1" src="assets/avatars/cute-duck.png" alt="" loading="lazy" decoding="async" />
+          <img class="floatie o-l2" src="assets/stickers/mic.png" alt="" loading="lazy" decoding="async" />
+          <img class="floatie o-l3" src="assets/stickers/message.png" alt="" loading="lazy" decoding="async" />
+          <img class="floatie o-l4" src="assets/avatars/cool-owl.png" alt="" loading="lazy" decoding="async" />
+          <img class="floatie o-r1" src="assets/stickers/bell.png" alt="" loading="lazy" decoding="async" />
+          <img class="floatie o-r2" src="assets/avatars/blue-fish.png" alt="" loading="lazy" decoding="async" />
+          <img class="floatie o-r3" src="assets/stickers/headset.png" alt="" loading="lazy" decoding="async" />
+          <img class="floatie o-r4" src="assets/avatars/crazy-yellow.png" alt="" loading="lazy" decoding="async" />
+        </div>
+
+        <div class="phone-shell">
+          <div class="phone-notch" aria-hidden="true"></div>
+          <div class="phone-screen">
+            <picture>
+              <source srcset="assets/img/app-screen.webp" type="image/webp" />
+              <img
+                src="assets/img/app-screen.png"
+                width="852"
+                height="1846"
+                alt="Duo app showing a private group with live voice"
+                decoding="async"
+              />
+            </picture>
+          </div>
+        </div>
+      </div>
 
       <a class="play-badge" href="https://play.google.com/store/apps/details?id=app.oneone.one_one_app" target="_blank" rel="noopener">
         <img
@@ -75,37 +85,68 @@
   </section>
 
   <!-- ================= FEATURES ================= -->
-  <section class="section">
+  <section class="section features" id="features">
     <div class="wrap">
       <div class="section-head">
         <p class="section-kicker" data-i18n="features.kicker">What's inside</p>
         <h2 class="section-title" data-i18n="features.title">Not a group chat. Not a call app.</h2>
         <p class="section-body" data-i18n="features.body">
-          Duo sits in between — always on, never demanding, and built for the people you already talk to every day.
+          Private groups → nudge to talk → live walkie voice → chat when it's quiet.
         </p>
       </div>
 
-      <div class="feature-grid">
-        <div class="feature-card">
-          <img src="assets/stickers/boysNgirls.png" alt="" />
-          <h3 data-i18n="features.groups.title">Groups</h3>
-          <p data-i18n="features.groups.body">Private groups. Invite with a link or a PIN — no public rooms, no strangers.</p>
-        </div>
-        <div class="feature-card">
-          <img src="assets/stickers/bell.png" alt="" />
-          <h3 data-i18n="features.nudges.title">Nudges</h3>
-          <p data-i18n="features.nudges.body">Ping the group when you want to talk. Works even if Duo isn't open on their end.</p>
-        </div>
-        <div class="feature-card">
-          <img src="assets/stickers/mic.png" alt="" />
-          <h3 data-i18n="features.voice.title">Live voice</h3>
-          <p data-i18n="features.voice.body">Push to talk. Whoever's around can hop on, no scheduled call needed.</p>
-        </div>
-        <div class="feature-card">
-          <img src="assets/stickers/message.png" alt="" />
-          <h3 data-i18n="features.chat.title">Chat</h3>
-          <p data-i18n="features.chat.body">Text when nobody's on the mic. Same group, same thread.</p>
-        </div>
+      <div class="feature-list">
+        <article class="feature reveal">
+          <div class="feature-art">
+            <picture>
+              <source srcset="assets/stickers/feature-groups.webp" type="image/webp" />
+              <img src="assets/stickers/feature-groups.png" width="1129" height="1129" alt="" loading="lazy" decoding="async" />
+            </picture>
+          </div>
+          <div class="feature-say">
+            <h3 data-i18n="features.groups.title">Groups</h3>
+            <p data-i18n="features.groups.body">Your circle only — join by link or PIN.</p>
+          </div>
+        </article>
+
+        <article class="feature reveal">
+          <div class="feature-art">
+            <picture>
+              <source srcset="assets/stickers/feature-nudges.webp" type="image/webp" />
+              <img src="assets/stickers/feature-nudges.png" width="1129" height="1129" alt="" loading="lazy" decoding="async" />
+            </picture>
+          </div>
+          <div class="feature-say">
+            <h3 data-i18n="features.nudges.title">Nudges</h3>
+            <p data-i18n="features.nudges.body">Tap the group awake, even with the app closed.</p>
+          </div>
+        </article>
+
+        <article class="feature reveal">
+          <div class="feature-art">
+            <picture>
+              <source srcset="assets/stickers/feature-voice.webp" type="image/webp" />
+              <img src="assets/stickers/feature-voice.png" width="1129" height="1129" alt="" loading="lazy" decoding="async" />
+            </picture>
+          </div>
+          <div class="feature-say">
+            <h3 data-i18n="features.voice.title">Live voice</h3>
+            <p data-i18n="features.voice.body">Hold to talk — whoever's around hears you.</p>
+          </div>
+        </article>
+
+        <article class="feature reveal">
+          <div class="feature-art">
+            <picture>
+              <source srcset="assets/stickers/feature-chat.webp" type="image/webp" />
+              <img src="assets/stickers/feature-chat.png" width="1129" height="1129" alt="" loading="lazy" decoding="async" />
+            </picture>
+          </div>
+          <div class="feature-say">
+            <h3 data-i18n="features.chat.title">Chat</h3>
+            <p data-i18n="features.chat.body">Text for when nobody's on the mic.</p>
+          </div>
+        </article>
       </div>
     </div>
   </section>
@@ -158,12 +199,25 @@
 
   <footer class="site-footer">
     <div class="wrap">
+      <nav class="social-list" aria-label="Duo on social media">
+        <a href="https://discord.com/invite/8R8MMz2Cd" target="_blank" rel="noopener" aria-label="Duo on Discord">Discord</a>
+        <a href="https://www.reddit.com/r/DuoWalkie/" target="_blank" rel="noopener" aria-label="Duo on Reddit">r/DuoWalkie</a>
+        <a href="https://www.instagram.com/duo.walkie" target="_blank" rel="noopener" aria-label="Duo on Instagram">@duo.walkie</a>
+      </nav>
+
       <div class="footer-links">
         <a href="privacy.html" data-i18n="nav.privacy">Privacy</a>
         <a href="terms.html" data-i18n="nav.terms">Terms</a>
         <a href="mailto:duowalkie@gmail.com">duowalkie@gmail.com</a>
       </div>
-      <div class="footer-copy" data-i18n="footer.copy">© 2026 Duo</div>
+
+      <div class="footer-meta">
+        <div class="lang-switch">
+          <button type="button" class="lang-current">English ▾</button>
+          <div class="lang-menu"></div>
+        </div>
+        <div class="footer-copy" data-i18n="footer.copy">© 2026 Duo</div>
+      </div>
     </div>
   </footer>
 
