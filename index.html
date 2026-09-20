@@ -20,65 +20,103 @@
 
   <link rel="stylesheet" href="css/style.css" />
 </head>
-<body>
+<body class="home">
 
   <header class="site-header">
     <div class="wrap">
       <a class="brand" href="index.html" aria-label="Duo — home">
         <img src="assets/img/logo.png" alt="Duo" width="500" height="500" />
       </a>
+
+      <nav class="social-list" aria-label="Duo on social media">
+        <a class="social-link" href="https://discord.com/invite/8R8MMz2Cd" target="_blank" rel="noopener" aria-label="Duo on Discord">
+          <img src="assets/icons/discord.svg" alt="" width="18" height="18" loading="lazy" decoding="async" />
+        </a>
+        <a class="social-link" href="https://www.reddit.com/r/DuoWalkie/" target="_blank" rel="noopener" aria-label="Duo on Reddit">
+          <img src="assets/icons/reddit.svg" alt="" width="18" height="18" loading="lazy" decoding="async" />
+        </a>
+        <a class="social-link" href="https://www.instagram.com/duo.walkie" target="_blank" rel="noopener" aria-label="Duo on Instagram">
+          <img src="assets/icons/instagram.svg" alt="" width="18" height="18" loading="lazy" decoding="async" />
+        </a>
+      </nav>
     </div>
   </header>
 
   <!-- ================= HERO ================= -->
   <section class="hero">
-    <div class="wrap hero-stage">
-      <h1 class="hero-tagline" data-i18n="hero.tagline">
-        A <span class="accent">walkie-talkie</span> for your group.
-      </h1>
+    <div class="hero-stage">
+      <div class="hero-copy">
+        <h1 class="hero-tagline" data-i18n="hero.tagline">
+          A <span class="accent">walkie-talkie</span> for your group.
+        </h1>
 
-      <p class="hero-sub" data-i18n="hero.sub">
-        Private groups. Nudges when you want to talk. Live voice when someone's around. Chat the rest of the time.
-      </p>
+        <!-- <p class="hero-sub" data-i18n="hero.sub">
+          Private groups. Nudges when you want to talk. Live voice when someone's around. Chat the rest of the time.
+        </p> -->
 
-      <!-- The phone is the anchor: stickers orbit it, so they can never
-           land on a heading or on the frame itself. -->
-      <div class="phone-orbit">
-        <div class="orbit" aria-hidden="true">
-          <img class="floatie o-l1" src="assets/avatars/cute-duck.png" alt="" loading="lazy" decoding="async" />
-          <img class="floatie o-l2" src="assets/stickers/mic.png" alt="" loading="lazy" decoding="async" />
-          <img class="floatie o-l3" src="assets/stickers/message.png" alt="" loading="lazy" decoding="async" />
-          <img class="floatie o-l4" src="assets/avatars/cool-owl.png" alt="" loading="lazy" decoding="async" />
-          <img class="floatie o-r1" src="assets/stickers/bell.png" alt="" loading="lazy" decoding="async" />
-          <img class="floatie o-r2" src="assets/avatars/blue-fish.png" alt="" loading="lazy" decoding="async" />
-          <img class="floatie o-r3" src="assets/stickers/headset.png" alt="" loading="lazy" decoding="async" />
-          <img class="floatie o-r4" src="assets/avatars/crazy-yellow.png" alt="" loading="lazy" decoding="async" />
-        </div>
-
-        <div class="phone-shell">
-          <div class="phone-notch" aria-hidden="true"></div>
-          <div class="phone-screen">
-            <picture>
-              <source srcset="assets/img/app-screen.webp" type="image/webp" />
-              <img
-                src="assets/img/app-screen.png"
-                width="852"
-                height="1846"
-                alt="Duo app showing a private group with live voice"
-                decoding="async"
-              />
-            </picture>
-          </div>
+        <div class="hero-actions">
+          <a class="play-badge" href="https://play.google.com/store/apps/details?id=app.oneone.one_one_app" target="_blank" rel="noopener">
+            <img
+              src="assets/img/google-play-badge.png"
+              data-i18n-attr="alt:play.alt"
+              alt="Get Duo on Google Play"
+            />
+          </a>
         </div>
       </div>
 
-      <a class="play-badge" href="https://play.google.com/store/apps/details?id=app.oneone.one_one_app" target="_blank" rel="noopener">
-        <img
-          src="assets/img/google-play-badge.png"
-          data-i18n-attr="alt:play.alt"
-          alt="Get Duo on Google Play"
-        />
-      </a>
+      <!-- Four illustrations, switching vertically on a loop. The first one
+           carries the alt text; the rest are the same idea, so they stay
+           decorative rather than repeating it to a screen reader. -->
+      <figure class="hero-explainer">
+        <div class="hero-carousel" data-hero-carousel>
+          <picture class="hero-slide is-active">
+            <source srcset="assets/img/hero/hero-1.webp" type="image/webp" />
+            <img
+              src="assets/img/hero/hero-1.jpg"
+              width="1122"
+              height="1402"
+              data-i18n-attr="alt:hero.explainer.alt"
+              alt="Two friends on Duo — one out on a balcony, one at home, talking live"
+              fetchpriority="high"
+              decoding="async"
+            />
+          </picture>
+
+          <picture class="hero-slide is-parked">
+            <source srcset="assets/img/hero/hero-2.webp" type="image/webp" />
+            <img src="assets/img/hero/hero-2.jpg" width="1122" height="1402" alt="" decoding="async" />
+          </picture>
+
+          <picture class="hero-slide is-parked">
+            <source srcset="assets/img/hero/hero-3.webp" type="image/webp" />
+            <img src="assets/img/hero/hero-3.jpg" width="1122" height="1402" alt="" decoding="async" />
+          </picture>
+
+          <picture class="hero-slide is-parked">
+            <source srcset="assets/img/hero/hero-4.webp" type="image/webp" />
+            <img src="assets/img/hero/hero-4.jpg" width="1122" height="1402" alt="" decoding="async" />
+          </picture>
+        </div>
+      </figure>
+
+      <div class="hero-visual">
+        <div class="phone-shell">
+          <div class="phone-notch" aria-hidden="true"></div>
+          <div class="phone-screen">
+            <!-- The loop is the GIF; the static capture is the fallback until
+                 assets/img/app-demo.gif exists. -->
+            <img
+              src="assets/img/app-demo.gif"
+              width="852"
+              height="1846"
+              alt="Duo app showing a private group with live voice"
+              decoding="async"
+              onerror="this.onerror=null;this.src='assets/img/app-screen.png';"
+            />
+          </div>
+        </div>
+      </div>
     </div>
 
     <div class="scroll-hint" data-i18n="hero.scroll">scroll</div>
@@ -95,8 +133,16 @@
         </p>
       </div>
 
-      <div class="feature-list">
+      <div class="feature-list" data-feature-flow>
+        <!-- The connecting line: geometry is measured from the real feature
+             positions in js/main.js, then drawn in as the page scrolls. -->
+        <svg class="feature-line" aria-hidden="true" preserveAspectRatio="none">
+          <path class="feature-line-track" fill="none" vector-effect="non-scaling-stroke" />
+          <path class="feature-line-flow" fill="none" vector-effect="non-scaling-stroke" />
+        </svg>
+
         <article class="feature reveal">
+          <span class="feature-node" aria-hidden="true"></span>
           <div class="feature-art">
             <picture>
               <source srcset="assets/stickers/feature-groups.webp" type="image/webp" />
@@ -110,6 +156,7 @@
         </article>
 
         <article class="feature reveal">
+          <span class="feature-node" aria-hidden="true"></span>
           <div class="feature-art">
             <picture>
               <source srcset="assets/stickers/feature-nudges.webp" type="image/webp" />
@@ -123,6 +170,7 @@
         </article>
 
         <article class="feature reveal">
+          <span class="feature-node" aria-hidden="true"></span>
           <div class="feature-art">
             <picture>
               <source srcset="assets/stickers/feature-voice.webp" type="image/webp" />
@@ -136,6 +184,7 @@
         </article>
 
         <article class="feature reveal">
+          <span class="feature-node" aria-hidden="true"></span>
           <div class="feature-art">
             <picture>
               <source srcset="assets/stickers/feature-chat.webp" type="image/webp" />
@@ -199,12 +248,7 @@
 
   <footer class="site-footer">
     <div class="wrap">
-      <nav class="social-list" aria-label="Duo on social media">
-        <a href="https://discord.com/invite/8R8MMz2Cd" target="_blank" rel="noopener" aria-label="Duo on Discord">Discord</a>
-        <a href="https://www.reddit.com/r/DuoWalkie/" target="_blank" rel="noopener" aria-label="Duo on Reddit">r/DuoWalkie</a>
-        <a href="https://www.instagram.com/duo.walkie" target="_blank" rel="noopener" aria-label="Duo on Instagram">@duo.walkie</a>
-      </nav>
-
+      <!-- socials now live in the header, top right -->
       <div class="footer-links">
         <a href="privacy.html" data-i18n="nav.privacy">Privacy</a>
         <a href="terms.html" data-i18n="nav.terms">Terms</a>
