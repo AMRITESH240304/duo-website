@@ -7,19 +7,25 @@
 
   "hero.tagline": "Ein <span class=\"accent\">Walkie-Talkie</span> für deine Lieben.",
   "hero.sub": "Private Gruppen. Ein Stups, wenn du reden willst. Live-Sprache, wenn jemand da ist. Chat für den Rest der Zeit.",
+  "hero.sub2": "Sofort sprechen. Kein Anrufen. Kein Warten. Immer bei deinen Leuten.",
   "hero.scroll": "scrollen",
   "hero.explainer.alt": "So funktioniert Duo: eine private Gruppe, ein Stups, dann Live-Sprache",
+  "hero.unmute": "Demo ton an",
+  "hero.mute": "Demo stumm",
   "play.alt": "Duo bei Google Play holen",
 
   "features.kicker": "Was drinsteckt",
   "features.title": "Kein Gruppenchat. Kein Anruf-Tool.",
-  "features.body": "Private Gruppen → anstupsen → Live-Walkie-Sprache → Chat, wenn's still ist.",
+  "features.body": "Private Gruppen → anstupsen → Widget → Live-Walkie-Sprache → Chat, wenn's still ist.",
 
   "features.groups.title": "Gruppen",
   "features.groups.body": "Nur dein Kreis — per Link oder PIN beitreten.",
 
   "features.nudges.title": "Nudges",
   "features.nudges.body": "Stups die Gruppe wach, auch bei geschlossener App.",
+
+  "features.widget.title": "Widget",
+  "features.widget.body": "Ein Tipp vom Homescreen — deine Stimme erreicht sie in 5 Sek.",
 
   "features.voice.title": "Live-Sprache",
   "features.voice.body": "Gedrückt halten und reden — wer da ist, hört dich.",

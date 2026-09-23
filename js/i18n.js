@@ -25,9 +25,8 @@
   }
 
   function pathToRoot() {
-    // Legal pages live at site root alongside index.html — i18n files are
-    // always under /i18n relative to the page's own directory structure.
-    return "";
+    // Root pages use "". Nested pages (e.g. /trial) set data-asset-root="../".
+    return document.documentElement.getAttribute("data-asset-root") || "";
   }
 
   async function loadDict(lang) {
@@ -97,6 +96,7 @@
     try {
       const dict = await loadDict(code);
       applyDict(dict);
+      window.DuoI18n.dict = dict;
       document.documentElement.setAttribute("lang", code);
       buildLangMenu(code);
     } catch (err) {
@@ -106,7 +106,7 @@
     }
   }
 
-  window.DuoI18n = { setLanguage, detectLang, SUPPORTED };
+  window.DuoI18n = { setLanguage, detectLang, SUPPORTED, dict: null };
 
   document.addEventListener("DOMContentLoaded", () => {
     setLanguage(detectLang());

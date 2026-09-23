@@ -7,19 +7,25 @@
 
   "hero.tagline": "Un <span class=\"accent\">walkie-talkie</span> para tus seres queridos.",
   "hero.sub": "Grupos privados. Un aviso cuando quieres hablar. Voz en vivo cuando alguien está cerca. Chat el resto del tiempo.",
+  "hero.sub2": "Habla al instante. Sin llamadas. Sin esperas. Siempre con tu gente.",
   "hero.scroll": "desliza",
   "hero.explainer.alt": "Cómo funciona Duo: un grupo privado, un toque y luego voz en directo",
+  "hero.unmute": "Activar sonido",
+  "hero.mute": "Silenciar demo",
   "play.alt": "Consigue Duo en Google Play",
 
   "features.kicker": "Qué incluye",
   "features.title": "No es un chat de grupo. No es una app de llamadas.",
-  "features.body": "Grupos privados → avisa para hablar → voz walkie en vivo → chat cuando hay silencio.",
+  "features.body": "Grupos privados → avisa para hablar → widget → voz walkie en vivo → chat cuando hay silencio.",
 
   "features.groups.title": "Grupos",
   "features.groups.body": "Solo tu círculo — entra con enlace o PIN.",
 
   "features.nudges.title": "Avisos",
   "features.nudges.body": "Despierta al grupo, aunque la app esté cerrada.",
+
+  "features.widget.title": "Widget",
+  "features.widget.body": "Un toque desde la pantalla de inicio — tu voz les llega en 5 seg.",
 
   "features.voice.title": "Voz en vivo",
   "features.voice.body": "Mantén pulsado y habla — te oye quien esté.",

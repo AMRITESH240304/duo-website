@@ -251,10 +251,64 @@
     measure();
   }
 
+  function heroPhoneVideo() {
+    const video = document.querySelector("[data-phone-video]");
+    const toggle = document.querySelector("[data-phone-audio]");
+    if (!video || !toggle) return;
+
+    function label(key, fallback) {
+      const dict = window.DuoI18n && window.DuoI18n.dict;
+      return (dict && dict[key]) || fallback;
+    }
+
+    function syncUi() {
+      const unmuted = !video.muted;
+      toggle.setAttribute("aria-pressed", unmuted ? "true" : "false");
+      toggle.setAttribute(
+        "aria-label",
+        unmuted ? label("hero.mute", "Mute demo") : label("hero.unmute", "Unmute demo")
+      );
+    }
+
+    function fitScreenToVideo() {
+      const screen = video.closest(".phone-screen");
+      if (!screen || !video.videoWidth || !video.videoHeight) return;
+      screen.style.aspectRatio = video.videoWidth + " / " + video.videoHeight;
+    }
+
+    function ensurePlaying() {
+      if (!video.paused) return;
+      const play = video.play();
+      if (play && typeof play.catch === "function") play.catch(() => {});
+    }
+
+    toggle.addEventListener("click", () => {
+      video.muted = !video.muted;
+      if (!video.muted) ensurePlaying();
+      syncUi();
+    });
+
+    document.addEventListener("visibilitychange", () => {
+      if (!document.hidden) ensurePlaying();
+    });
+
+    video.addEventListener("pause", () => {
+      if (!document.hidden) ensurePlaying();
+    });
+
+    video.addEventListener("loadedmetadata", fitScreenToVideo);
+    if (video.readyState >= 1) fitScreenToVideo();
+
+    video.muted = true;
+    syncUi();
+    ensurePlaying();
+  }
+
   document.addEventListener("DOMContentLoaded", () => {
     stickyHeader();
     heroParallax();
     heroCarousel();
+    heroPhoneVideo();
     revealOnScroll();
     featureFlow();
   });
