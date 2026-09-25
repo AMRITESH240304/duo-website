@@ -4,6 +4,8 @@
 
   "nav.privacy": "Confidentialité",
   "nav.terms": "Conditions",
+  "nav.founder": "Mot du fondateur",
+  "nav.careers": "Carrières",
 
   "hero.tagline": "Un <span class=\"accent\">talkie-walkie</span> pour tes proches.",
   "hero.sub": "Groupes privés. Un signal quand tu veux parler. Voix en direct quand quelqu'un est là. Le chat le reste du temps.",
@@ -51,6 +53,8 @@
 
   "cta.title": "Télécharger Duo",
   "cta.body": "Gratuit sur Android. Disponible sur Google Play.",
+  "cta.founderLink": "Lire le mot du fondateur →",
+  "cta.coffee": "Offrez-moi un café",
 
   "footer.copy": "© 2026 Duo",
 

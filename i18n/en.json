@@ -4,6 +4,8 @@
 
   "nav.privacy": "Privacy",
   "nav.terms": "Terms",
+  "nav.founder": "Founder's note",
+  "nav.careers": "Careers",
 
   "hero.tagline": "A <span class=\"accent\">walkie-talkie</span> for your close ones.",
   "hero.sub": "Private groups. Nudges when you want to talk. Live voice when someone's around. Chat the rest of the time.",
@@ -51,6 +53,8 @@
 
   "cta.title": "Get Duo",
   "cta.body": "Free on Android. Download from Google Play.",
+  "cta.founderLink": "Read a note from the founder →",
+  "cta.coffee": "Buy me a coffee",
 
   "footer.copy": "© 2026 Duo",
 

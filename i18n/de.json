@@ -4,6 +4,8 @@
 
   "nav.privacy": "Datenschutz",
   "nav.terms": "Bedingungen",
+  "nav.founder": "Notiz des Gründers",
+  "nav.careers": "Karriere",
 
   "hero.tagline": "Ein <span class=\"accent\">Walkie-Talkie</span> für deine Lieben.",
   "hero.sub": "Private Gruppen. Ein Stups, wenn du reden willst. Live-Sprache, wenn jemand da ist. Chat für den Rest der Zeit.",
@@ -51,6 +53,8 @@
 
   "cta.title": "Duo holen",
   "cta.body": "Kostenlos für Android. Jetzt bei Google Play laden.",
+  "cta.founderLink": "Eine Notiz vom Gründer lesen →",
+  "cta.coffee": "Spendier mir einen Kaffee",
 
   "footer.copy": "© 2026 Duo",
 

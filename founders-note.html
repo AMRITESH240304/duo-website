@@ -1,0 +1,361 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Duo — A note from the founder</title>
+  <meta name="description" content="Why Duo exists, how it's being built, and the people using it." />
+  <link rel="icon" href="assets/img/logo.png" />
+  <meta property="og:title" content="Duo — A note from the founder" />
+  <meta property="og:description" content="Why Duo exists, how it's being built, and the people using it." />
+  <meta property="og:image" content="assets/img/logo.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&family=Caveat:wght@500;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body class="founder-page" data-i18n-meta="skip">
+
+  <header class="site-header">
+    <div class="wrap">
+      <a class="brand" href="index.html" aria-label="Duo — home">
+        <img src="assets/img/logo.png" alt="" width="500" height="500" />
+        <span class="brand-name">Duo</span>
+      </a>
+
+      <nav class="social-list" aria-label="Duo on social media">
+        <a class="header-coffee" href="https://buymeacoffee.com/shivanshch7" target="_blank" rel="noopener" aria-label="Buy me a coffee">
+          <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 8h13v6a5 5 0 0 1-5 5H9a5 5 0 0 1-5-5V8z"/><path d="M17 10h1.5a2.5 2.5 0 0 1 0 5H17"/><path d="M8 2.5c0 1 1 1.5 1 2.5M12 2.5c0 1 1 1.5 1 2.5"/></svg>
+          <span data-i18n="cta.coffee">Buy me a coffee</span>
+        </a>
+        <a class="social-link" href="https://discord.com/invite/8R8MMz2Cd" target="_blank" rel="noopener" aria-label="Duo on Discord">
+          <img src="assets/icons/discord.svg" alt="" width="18" height="18" loading="lazy" decoding="async" />
+        </a>
+        <a class="social-link" href="https://www.reddit.com/r/DuoWalkie/" target="_blank" rel="noopener" aria-label="Duo on Reddit">
+          <img src="assets/icons/reddit.svg" alt="" width="18" height="18" loading="lazy" decoding="async" />
+        </a>
+        <a class="social-link" href="https://www.instagram.com/duo.walkie" target="_blank" rel="noopener" aria-label="Duo on Instagram">
+          <img src="assets/icons/instagram.svg" alt="" width="18" height="18" loading="lazy" decoding="async" />
+        </a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+
+    <!-- ================= LETTER ================= -->
+    <section class="note-hero">
+      <div class="wrap note-wrap">
+        <p class="section-kicker">Founder's note</p>
+        <h1 class="page-title">Why I'm building Duo</h1>
+
+        <article class="letter">
+          <span class="tape tape-left" aria-hidden="true"></span>
+          <span class="tape tape-right" aria-hidden="true"></span>
+
+          <!-- Swap the placeholder for a real photo:
+               <div class="ph"><img src="assets/founder/me.jpg" alt="Shivansh" /></div> -->
+          <figure class="polaroid letter-photo" style="--tilt: 4deg">
+            <div class="ph placeholder"><img src="assets/avatars/cool-owl.png" alt="" /></div>
+            <figcaption>me, mid-bug</figcaption>
+          </figure>
+
+          <p class="letter-date">September 2026</p>
+          <p>Hey,</p>
+          <p>
+            Duo started with a group of friends who kept saying <em>"we should call more"</em>
+            and never did. Calls felt like meetings — someone had to schedule them, and half
+            the time someone was busy. The group chat was the opposite: always on, but mostly
+            memes and read receipts.
+          </p>
+          <p>
+            What I missed was the feeling of being in the same room. You say something out
+            loud, and whoever's around answers. No invite, no ringing, no pressure.
+          </p>
+          <p>
+            So I started building a walkie-talkie for that group. A nudge when you want to talk.
+            Push to talk when someone's around. Chat for everything else. That's still the whole idea.
+          </p>
+          <p>
+            Duo is being built by a very small team — for a long time, just me — mostly late at
+            night, and tested on the same friends who complained the loudest. Every feature has
+            to earn its place by getting that group to talk a little more.
+          </p>
+          <p>
+            If you're reading this, you're early. Thank you for trying it. If something breaks,
+            feels off, or you just want to tell me how your group uses it, write to me.
+            I read everything.
+          </p>
+
+          <div class="letter-sign">
+            <p>Talk soon,</p>
+            <span class="signature">Shivansh</span>
+            <span class="sign-role">Founder, Duo</span>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- ================= WORK PROCESS ================= -->
+    <section class="section">
+      <div class="wrap">
+        <div class="section-head">
+          <p class="section-kicker">Work in progress</p>
+          <h2 class="section-title">How Duo is being built</h2>
+          <p class="section-body">
+            No big team, no big office. Here's the honest version, straight from the build log.
+          </p>
+        </div>
+
+        <ol class="timeline">
+          <li class="tl-item">
+            <span class="tl-dot" aria-hidden="true"></span>
+            <div class="tl-card">
+              <div class="tl-body">
+                <span class="tl-when">The spark</span>
+                <h3>A group chat that never turned into a call</h3>
+                <p>
+                  Every plan to "hop on a call" died in the chat. The idea was simple: make talking
+                  as easy as sending a message, without the weight of a phone call.
+                </p>
+                <span class="tl-note">codename: one-one. the repo is still called that.</span>
+              </div>
+            </div>
+          </li>
+
+          <li class="tl-item">
+            <span class="tl-dot" aria-hidden="true"></span>
+            <div class="tl-card">
+              <div class="tl-body">
+                <span class="tl-when">Sketches</span>
+                <h3>Paper first, code later</h3>
+                <p>
+                  Before any code, the nudge button got drawn over and over. It had to feel like
+                  tapping a friend on the shoulder, not like ringing their phone.
+                </p>
+              </div>
+              <figure class="polaroid" style="--tilt: 3deg">
+                <div class="ph placeholder"><img src="assets/stickers/bell.png" alt="" /></div>
+                <figcaption>nudge button, v1</figcaption>
+              </figure>
+            </div>
+          </li>
+
+          <li class="tl-item">
+            <span class="tl-dot" aria-hidden="true"></span>
+            <div class="tl-card">
+              <div class="tl-body">
+                <span class="tl-when">First build</span>
+                <h3>Two phones, one desk, push to talk</h3>
+                <p>
+                  The first working version was two phones side by side, talking to each other.
+                  Most of that month went into shaving off delay so the voice felt live, not like
+                  a voice note.
+                </p>
+                <span class="tl-note">2am. talking to myself. it worked.</span>
+              </div>
+              <figure class="polaroid" style="--tilt: -3deg">
+                <div class="ph placeholder"><img src="assets/stickers/mic.png" alt="" /></div>
+                <figcaption>first live test</figcaption>
+              </figure>
+            </div>
+          </li>
+
+          <li class="tl-item">
+            <span class="tl-dot" aria-hidden="true"></span>
+            <div class="tl-card">
+              <div class="tl-body">
+                <span class="tl-when">Friends &amp; family</span>
+                <h3>Handing it to the loudest critics</h3>
+                <p>
+                  The first testers were friends who don't hold back. Their biggest note:
+                  a nudge has to land even when the app is closed. That one piece of feedback
+                  rewired how the whole app works.
+                </p>
+              </div>
+            </div>
+          </li>
+
+          <li class="tl-item tl-now">
+            <span class="tl-dot" aria-hidden="true"></span>
+            <div class="tl-card">
+              <div class="tl-body">
+                <span class="tl-when">Now</span>
+                <h3>Out on Google Play, still small</h3>
+                <p>
+                  Duo is live and growing one friend group at a time. Every week: read feedback,
+                  fix what's broken, ship something small.
+                </p>
+              </div>
+            </div>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- ================= REAL STORIES ================= -->
+    <!-- Replace these with real quotes from people who've agreed to be featured. -->
+    <section class="stories-band">
+      <div class="wrap">
+        <div class="section-head">
+          <p class="section-kicker">Real moments</p>
+          <h2 class="section-title">From the groups using Duo</h2>
+          <p class="section-body">
+            Duo is built for the people you already talk to. Here's how some of them use it.
+          </p>
+        </div>
+
+        <div class="story-grid">
+          <article class="story">
+            <div class="story-chat" aria-hidden="true">
+              <div class="chat-system"><img src="assets/stickers/bell.png" alt="" /> Kabir nudged the group</div>
+              <div class="bubble"><img src="assets/avatars/blue-fish.png" alt="" /><span>anyone around? need to rant about that match</span></div>
+              <div class="bubble out"><span>on mic in 2</span></div>
+            </div>
+            <blockquote>
+              "We had a 'call?' message that sat unanswered for hours. Now someone nudges and
+              whoever's free just hops on. Closest thing to our hostel corridor since graduating."
+            </blockquote>
+            <footer class="story-foot">
+              <img src="assets/avatars/cute-duck.png" alt="" />
+              <div><strong>Riya</strong><span>College group · 5 friends</span></div>
+            </footer>
+          </article>
+
+          <article class="story">
+            <div class="story-chat" aria-hidden="true">
+              <div class="bubble"><img src="assets/avatars/cloudy-wish.png" alt="" /><span>hello? can you hear me?</span></div>
+              <div class="bubble out"><span>loud and clear, Ma</span></div>
+            </div>
+            <blockquote>
+              "My parents aren't texters. A nudge and a quick 'hello?' on the mic is just easier
+              for them than typing. They use it more than I do now."
+            </blockquote>
+            <footer class="story-foot">
+              <img src="assets/avatars/crazy-yellow.png" alt="" />
+              <div><strong>Arjun</strong><span>Family group · 4 people</span></div>
+            </footer>
+          </article>
+
+          <article class="story">
+            <div class="story-chat" aria-hidden="true">
+              <div class="bubble"><img src="assets/avatars/good-virus.png" alt="" /><span>hey, quick one</span></div>
+              <div class="chat-system"><img src="assets/stickers/online_orb.png" alt="" /> 3 people on mic</div>
+            </div>
+            <blockquote>
+              "We keep Duo open while working from different cities. Most days it's quiet, but when
+              someone says 'hey, quick one', it feels like sharing a desk again."
+            </blockquote>
+            <footer class="story-foot">
+              <img src="assets/avatars/cool-owl.png" alt="" />
+              <div><strong>Meera</strong><span>Old office crew · 7 friends</span></div>
+            </footer>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= SCRAPBOOK ================= -->
+    <!-- Add photos to assets/founder/ and swap each .ph.placeholder for:
+         <div class="ph"><img src="assets/founder/xyz.jpg" alt="..." /></div> -->
+    <section class="section">
+      <div class="wrap">
+        <div class="section-head">
+          <p class="section-kicker">Scrapbook</p>
+          <h2 class="section-title">From the desk</h2>
+          <p class="section-body">Photos and scraps from the build. More get pinned here as Duo grows.</p>
+        </div>
+
+        <div class="desk-grid">
+          <figure class="polaroid">
+            <div class="ph placeholder"><img src="assets/stickers/message.png" alt="" /></div>
+            <figcaption>whiteboard, week one</figcaption>
+          </figure>
+          <figure class="polaroid">
+            <div class="ph placeholder"><img src="assets/stickers/headset.png" alt="" /></div>
+            <figcaption>testing audio at 2am</figcaption>
+          </figure>
+          <figure class="polaroid">
+            <div class="ph placeholder"><img src="assets/stickers/boysNgirls.png" alt="" /></div>
+            <figcaption>the group that started it</figcaption>
+          </figure>
+          <figure class="polaroid">
+            <div class="ph placeholder"><img src="assets/stickers/gift.png" alt="" /></div>
+            <figcaption>sticker drafts</figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= SUPPORT (optional) ================= -->
+    <!-- Toggle and links live in js/site-config.js -->
+    <section class="support-band" id="support" data-support>
+      <div class="wrap support-inner">
+        <div class="support-copy">
+          <p class="section-kicker">Optional</p>
+          <h2 class="section-title">Keep the mic on</h2>
+          <p class="section-body">
+            Duo is free, and the core of it will stay free. If it's earned a spot in your group's
+            day and you feel like chipping in, it helps cover servers and late-night coffee.
+          </p>
+          <p class="support-fine">
+            No perks, no pressure. Using Duo and telling one friend about it helps just as much.
+          </p>
+        </div>
+
+        <div class="support-options">
+          <a class="support-card" data-support-link="buyMeACoffee" href="#">
+            <span class="support-icon coffee" aria-hidden="true">
+              <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 8h13v6a5 5 0 0 1-5 5H9a5 5 0 0 1-5-5V8z"/><path d="M17 10h1.5a2.5 2.5 0 0 1 0 5H17"/><path d="M8 2.5c0 1 1 1.5 1 2.5M12 2.5c0 1 1 1.5 1 2.5"/></svg>
+            </span>
+            <span class="support-text">
+              <strong>Buy me a coffee</strong>
+              <small>One-time or monthly, any amount</small>
+            </span>
+            <span class="support-arrow" aria-hidden="true">→</span>
+            <span class="soon-pill">Coming soon</span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= WRITE BACK ================= -->
+    <section class="write-back">
+      <div class="wrap">
+        <h2 class="section-title">Write back</h2>
+        <p class="section-body">
+          A bug, a story, an idea, or just hi. Every message lands in my inbox.
+        </p>
+        <div class="write-back-actions">
+          <a class="btn" data-mail="contact" data-mail-subject="Hi Shivansh" href="mailto:duowalkie@gmail.com">Send me a note</a>
+          <a class="btn btn-ghost" href="careers.html">Work with us</a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap">
+      <div class="footer-links">
+        <a href="founders-note.html" data-i18n="nav.founder">Founder's note</a>
+        <a href="careers.html" data-i18n="nav.careers">Careers</a>
+        <a href="privacy.html" data-i18n="nav.privacy">Privacy</a>
+        <a href="terms.html" data-i18n="nav.terms">Terms</a>
+        <a href="mailto:duowalkie@gmail.com">duowalkie@gmail.com</a>
+      </div>
+
+      <div class="footer-meta">
+        <div class="lang-switch">
+          <button type="button" class="lang-current">English ▾</button>
+          <div class="lang-menu"></div>
+        </div>
+        <div class="footer-copy" data-i18n="footer.copy">© 2026 Duo</div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/site-config.js"></script>
+  <script src="js/i18n.js"></script>
+  <script src="js/pages.js"></script>
+</body>
+</html>

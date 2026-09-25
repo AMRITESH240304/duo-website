@@ -52,6 +52,7 @@
       });
     });
 
+    if (document.body.dataset.i18nMeta === "skip") return;
     if (dict["meta.title"]) document.title = dict["meta.title"];
     const metaDesc = document.querySelector('meta[name="description"]');
     if (metaDesc && dict["meta.description"]) {
