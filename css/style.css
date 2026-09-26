@@ -65,7 +65,7 @@ a { color: inherit; text-decoration: none; }
   backdrop-filter: blur(6px);
 }
 
-/* full bleed: brand hard left, socials hard right */
+/* full bleed: brand hard left, socials then the CTA hard right */
 .site-header .wrap {
   max-width: none;
   display: flex;
@@ -92,7 +92,13 @@ a { color: inherit; text-decoration: none; }
   line-height: 1;
 }
 
-/* ---------- social links (header, top right) ---------- */
+/* ---------- social links (header, left of the CTA) ---------- */
+
+.header-actions {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
 
 .social-list {
   display: flex;
@@ -325,6 +331,13 @@ a { color: inherit; text-decoration: none; }
   padding: 0 10px;
   border-radius: 8px;
   box-shadow: 0 3px 0 rgba(26,20,6,0.12);
+}
+
+.live-emoji img {
+  display: inline-block;
+  width: 1.1em;
+  height: 1.1em;
+  vertical-align: -0.18em;
 }
 
 .hero-sub {
@@ -588,6 +601,12 @@ a { color: inherit; text-decoration: none; }
   padding: clamp(36px, 6vw, 76px) 0;
   position: relative;
   z-index: 1;
+  scroll-snap-align: center;
+  scroll-margin: 8vh;
+}
+
+@media (pointer: coarse) and (prefers-reduced-motion: no-preference) {
+  .feature { scroll-snap-stop: always; }
 }
 
 .feature:nth-of-type(even) .feature-art { order: 2; }
@@ -642,6 +661,115 @@ a { color: inherit; text-decoration: none; }
   transform: scale(1.12);
 }
 
+.feature-node.is-celebrating::after {
+  content: "";
+  position: absolute;
+  inset: -7px;
+  border-radius: inherit;
+  border: 2px solid var(--yellow);
+  animation: node-ring 720ms ease-out forwards;
+  pointer-events: none;
+}
+
+@keyframes node-ring {
+  0% { transform: scale(0.55); opacity: 0.95; }
+  100% { transform: scale(2.6); opacity: 0; }
+}
+
+/* Milestone celebration: a sticker pops at the dot, and a short burst
+   of emoji plus sparks falls away with gravity. */
+.milestone-burst {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 0;
+  height: 0;
+  z-index: 4;
+  pointer-events: none;
+  overflow: visible;
+}
+
+.burst-bit {
+  position: absolute;
+  left: 0;
+  top: 0;
+  line-height: 1;
+  font-size: 22px;
+  font-family: "Apple Color Emoji", "Segoe UI Emoji", "Noto Color Emoji", sans-serif;
+  user-select: none;
+  will-change: transform, opacity;
+  filter: drop-shadow(0 8px 10px rgba(26, 20, 6, 0.18));
+}
+
+.burst-spark {
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+  background: var(--yellow);
+  box-shadow: 0 0 0 4px rgba(248, 190, 3, 0.28);
+  font-size: 0;
+  filter: none;
+}
+
+.burst-spark.is-ink {
+  width: 6px;
+  height: 6px;
+  background: var(--ink);
+  box-shadow: none;
+}
+
+.burst-spark.is-star {
+  width: 12px;
+  height: 12px;
+  border-radius: 1px;
+  background: var(--yellow);
+  box-shadow: none;
+  clip-path: polygon(50% 0%, 62% 35%, 100% 50%, 62% 65%, 50% 100%, 38% 65%, 0% 50%, 38% 35%);
+}
+
+.milestone-sticker {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 46px;
+  height: 46px;
+  margin: -80px 0 0 -23px;
+  border-radius: 14px;
+  background: var(--yellow);
+  color: var(--ink);
+  display: grid;
+  place-items: center;
+  z-index: 5;
+  pointer-events: none;
+  box-shadow:
+    0 4px 0 rgba(26, 20, 6, 0.12),
+    0 16px 28px rgba(26, 20, 6, 0.16);
+  animation: sticker-pop 860ms cubic-bezier(0.16, 0.84, 0.24, 1) forwards;
+}
+
+.milestone-sticker svg { display: block; width: 22px; height: 22px; }
+
+.feature:nth-of-type(odd) .milestone-sticker { margin-left: -42px; }
+.feature:nth-of-type(even) .milestone-sticker { margin-left: -4px; }
+
+@keyframes sticker-pop {
+  0% { transform: scale(0.15) rotate(-16deg); opacity: 0; }
+  28% { transform: scale(1.14) rotate(8deg); opacity: 1; }
+  48% { transform: scale(0.96) rotate(-3deg); opacity: 1; }
+  68% { transform: scale(1.04) rotate(2deg); opacity: 1; }
+  100% { transform: scale(0.9) rotate(0deg) translateY(-10px); opacity: 0; }
+}
+
+.feature.is-celebrating .feature-art img {
+  animation: art-pop 760ms cubic-bezier(0.18, 0.9, 0.22, 1);
+}
+
+@keyframes art-pop {
+  0% { transform: scale(0.92) rotate(-2deg); }
+  42% { transform: scale(1.05) rotate(1.4deg); }
+  100% { transform: scale(1) rotate(0deg); }
+}
+
 .feature-art img {
   width: 100%;
   max-width: 420px;
@@ -649,6 +777,13 @@ a { color: inherit; text-decoration: none; }
   margin: 0 auto;
   filter: drop-shadow(0 22px 40px rgba(26, 20, 6, 0.18));
 }
+
+.feature-say {
+  position: relative;
+  z-index: 4;
+}
+
+.feature-art { position: relative; z-index: 1; }
 
 .feature-say h3 {
   font-size: clamp(24px, 3.4vw, 34px);
@@ -940,6 +1075,9 @@ a { color: inherit; text-decoration: none; }
   .feature-list { --bow: 0px; }
   .feature-node,
   .feature:nth-of-type(even) .feature-node { left: 6px; }
+
+  .feature:nth-of-type(odd) .milestone-sticker,
+  .feature:nth-of-type(even) .milestone-sticker { margin-left: -23px; }
 }
 
 @media (max-width: 720px) {
@@ -985,6 +1123,13 @@ a { color: inherit; text-decoration: none; }
   }
 }
 
+@media (pointer: coarse) and (prefers-reduced-motion: no-preference) {
+  html {
+    scroll-snap-type: y proximity;
+    scroll-padding-top: var(--header-h);
+  }
+}
+
 @media (prefers-reduced-motion: reduce) {
   /* no travel — the slides cross-fade in place instead */
   .hero-slide {
@@ -995,7 +1140,11 @@ a { color: inherit; text-decoration: none; }
   .hero-slide.is-active { opacity: 1; }
   .hero-slide.is-parked { transition: none; }
   .reveal { opacity: 1; transform: none; transition: none; }
+  .feature { scroll-snap-align: none; scroll-snap-stop: normal; }
   .feature-node { transition: none; }
+  .feature-node.is-celebrating::after,
+  .milestone-sticker,
+  .feature.is-celebrating .feature-art img { animation: none; }
   .phone-shell { transform: none !important; }
 }
 
@@ -1077,7 +1226,7 @@ a { color: inherit; text-decoration: none; }
   display: inline-flex;
   align-items: center;
   gap: 6px;
-  margin-right: 8px;
+  margin-left: 4px;
   padding: 7px 14px;
   border-radius: 999px;
   background: var(--yellow);
@@ -1095,7 +1244,7 @@ a { color: inherit; text-decoration: none; }
 }
 
 @media (max-width: 560px) {
-  .header-coffee { padding: 8px; margin-right: 4px; }
+  .header-coffee { padding: 8px; margin-left: 2px; }
   .header-coffee span { display: none; }
 }
 

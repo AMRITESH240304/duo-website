@@ -1,7 +1,139 @@
 /* Duo site — subtle scroll motion on the hero phone, feature reveals, and the
- * line that threads the four features together as you scroll past them.
+ * line that threads the features together as you scroll past them.
  * Transform / stroke only, so nothing reflows and nothing shifts layout.
  */
+
+const MILESTONE_BURSTS = {
+  groups: ["🫂", "✨", "💛", "⭐"],
+  nudges: ["👋", "✨", "🔔", "💛"],
+  widget: ["📲", "✨", "⚡", "⭐"],
+  voice: ["🎙️", "✨", "🔊", "💛"],
+  chat: ["💬", "✨", "💛", "⭐"],
+};
+
+function easeOutBack(t) {
+  const c1 = 1.70158;
+  const c3 = c1 + 1;
+  return 1 + c3 * Math.pow(t - 1, 3) + c1 * Math.pow(t - 1, 2);
+}
+
+/* One celebratory beat per milestone: a sticker pops off the dot, and a
+ * short emoji-and-spark burst arcs out, then falls. */
+function celebrateMilestone(node) {
+  if (!node || node.dataset.celebrated) return;
+  if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
+  node.dataset.celebrated = "1";
+
+  const feature = node.closest(".feature");
+  if (feature) feature.classList.add("is-celebrating");
+  node.classList.add("is-celebrating");
+
+  const burst = document.createElement("div");
+  burst.className = "milestone-burst";
+  burst.setAttribute("aria-hidden", "true");
+
+  const sticker = document.createElement("span");
+  sticker.className = "milestone-sticker";
+  sticker.innerHTML =
+    '<svg viewBox="0 0 24 24" width="28" height="28" aria-hidden="true">' +
+    '<path fill="#1a1406" d="M12 2.2l2.15 6.35h6.6l-5.35 4.05 2.05 6.4L12 15.15 6.55 19l2.05-6.4L3.25 8.55h6.6z"/>' +
+    "</svg>";
+  burst.appendChild(sticker);
+
+  const glyphs = MILESTONE_BURSTS[(feature && feature.dataset.feature) || "groups"] || MILESTONE_BURSTS.groups;
+  const bits = [];
+  const count = 11;
+  const textOnRight = feature ? !feature.matches(":nth-of-type(even)") : true;
+
+  for (let i = 0; i < count; i++) {
+    const el = document.createElement("span");
+    const kind = i % 3;
+    const emoji = kind === 0;
+    el.className = emoji
+      ? "burst-bit"
+      : "burst-bit burst-spark" + (kind === 1 ? " is-star" : i % 2 ? " is-ink" : "");
+    if (emoji) el.textContent = glyphs[i % glyphs.length];
+    burst.appendChild(el);
+
+    // Fountain upward, biased away from the copy so the words stay clear.
+    const spread = (i / (count - 1) - 0.5) * Math.PI * 0.95;
+    const angle = -Math.PI / 2 + spread + (textOnRight ? -0.35 : 0.35) + (Math.random() - 0.5) * 0.2;
+    const speed = (emoji ? 180 : 230) + Math.random() * 120;
+    bits.push({
+      el,
+      x: 0,
+      y: 0,
+      vx: Math.cos(angle) * speed,
+      vy: Math.sin(angle) * speed - (emoji ? 30 : 8),
+      rot: (Math.random() - 0.5) * 40,
+      vr: (Math.random() - 0.5) * 280,
+      scale: emoji ? 0.82 + Math.random() * 0.5 : 0.65 + Math.random() * 0.7,
+    });
+  }
+
+  node.appendChild(burst);
+
+  let avoid = null;
+  if (feature) {
+    const title = feature.querySelector("h3");
+    const copy = feature.querySelector("p");
+    if (title && copy) {
+      const a = title.getBoundingClientRect();
+      const b = copy.getBoundingClientRect();
+      const origin = node.getBoundingClientRect();
+      const ox = origin.left + origin.width / 2;
+      const oy = origin.top + origin.height / 2;
+      const pad = 36;
+      avoid = {
+        left: Math.min(a.left, b.left) - ox - pad,
+        right: Math.max(a.right, b.right) - ox + pad,
+        top: Math.min(a.top, b.top) - oy - pad,
+        bottom: Math.max(a.bottom, b.bottom) - oy + pad,
+      };
+    }
+  }
+
+  const start = performance.now();
+  const duration = 900;
+  let last = start;
+
+  function frame(now) {
+    const t = Math.min(1, (now - start) / duration);
+    const dt = Math.min(0.034, (now - last) / 1000);
+    last = now;
+
+    bits.forEach((bit) => {
+      bit.vy += 380 * dt;
+      bit.vx *= Math.pow(0.08, dt);
+      bit.vy *= Math.pow(0.16, dt);
+      bit.x += bit.vx * dt;
+      bit.y += bit.vy * dt;
+      if (avoid && bit.x > avoid.left && bit.x < avoid.right && bit.y > avoid.top && bit.y < avoid.bottom) {
+        bit.el.style.opacity = "0";
+        return;
+      }
+      bit.rot += bit.vr * dt;
+      const pop = t < 0.16 ? easeOutBack(t / 0.16) : 1;
+      const fade = t < 0.34 ? 1 : 1 - (t - 0.34) / 0.66;
+      bit.el.style.transform =
+        "translate(-50%, -50%) translate(" +
+        bit.x.toFixed(1) + "px," + bit.y.toFixed(1) + "px) rotate(" +
+        bit.rot.toFixed(1) + "deg) scale(" + (bit.scale * Math.max(0, pop)).toFixed(3) + ")";
+      bit.el.style.opacity = String(Math.max(0, fade));
+    });
+
+    if (t < 1) {
+      requestAnimationFrame(frame);
+      return;
+    }
+
+    burst.remove();
+    node.classList.remove("is-celebrating");
+    if (feature) feature.classList.remove("is-celebrating");
+  }
+
+  requestAnimationFrame(frame);
+}
 
 (function () {
   const reduced = window.matchMedia("(prefers-reduced-motion: reduce)");
@@ -147,6 +279,8 @@
     let length = 0;
     let stops = [];
     let ticking = false;
+    let armed = false;
+    const seenAt = new Map();
 
     function buildPath(points) {
       let d = "M " + points[0].x.toFixed(1) + " " + points[0].y.toFixed(1);
@@ -210,34 +344,128 @@
       paint();
     }
 
-    function paint() {
+    function paint(fromScroll) {
       if (!length) return;
 
       let p = 1;
+      let box = null;
       if (!reduced.matches) {
-        const box = list.getBoundingClientRect();
-        // the line follows a reading line a little below mid-viewport
-        p = clamp01((window.innerHeight * 0.68 - box.top) / box.height);
+        box = list.getBoundingClientRect();
+        // The reading line sits at mid-viewport so a snapped feature,
+        // its dot, and the celebration all land together.
+        p = clamp01((window.innerHeight * 0.5 - box.top) / box.height);
+      }
+
+      const center = window.innerHeight * 0.5;
+      let hold = -1;
+      let holdDist = 110;
+
+      if (box) {
+        nodes.forEach((node, i) => {
+          const y = box.top + Number(node.dataset.flowY);
+          const dist = Math.abs(y - center);
+          if (dist < holdDist && y <= center + 28) {
+            holdDist = dist;
+            hold = i;
+          }
+
+          const prev = seenAt.has(node) ? seenAt.get(node) : y;
+          seenAt.set(node, y);
+          if (!fromScroll || reduced.matches) return;
+          const crossed = prev > center - 8 && y <= center + 8 && prev > y;
+          const resting = dist < 64 && y <= center + 24;
+          if (y > center + 150) delete node.dataset.paused;
+          if (armed && (crossed || resting)) celebrateMilestone(node);
+        });
+
+        if (hold >= 0) p = Math.max(p, stops[hold]);
       }
 
       flow.style.strokeDashoffset = (length * (1 - p)).toFixed(2);
       nodes.forEach((node, i) => {
-        node.classList.toggle("lit", p >= stops[i] - 0.005);
+        const was = node.classList.contains("lit");
+        const lit = was ? p >= stops[i] - 0.04 : p >= stops[i] - 0.005;
+        node.classList.toggle("lit", lit);
       });
+    }
+
+    /* Desktop wheels pause on the milestone the next notch would cross,
+     * long enough for the sticker to read, then scrolling continues.
+     * Touch uses scroll-snap-stop instead. */
+    function bindMilestonePause() {
+      const fine = window.matchMedia("(pointer: fine)");
+      if (!fine.matches || reduced.matches) return;
+
+      let lockUntil = 0;
+
+      window.addEventListener(
+        "wheel",
+        (event) => {
+          if (reduced.matches || event.ctrlKey) return;
+          const now = performance.now();
+          if (now < lockUntil) {
+            if (event.deltaY < 0) {
+              lockUntil = 0;
+              nodes.forEach((node) => {
+                const rect = node.getBoundingClientRect();
+                if (rect.top + rect.height / 2 > window.innerHeight * 0.5) {
+                  delete node.dataset.paused;
+                }
+              });
+              return;
+            }
+            event.preventDefault();
+            return;
+          }
+          let delta = event.deltaY;
+          if (event.deltaMode === 1) delta *= 16;
+          else if (event.deltaMode === 2) delta *= window.innerHeight;
+          if (delta <= 0) return;
+
+          const center = window.innerHeight * 0.5;
+          const reach = Math.min(88, Math.max(42, Math.abs(delta) + 12));
+          let target = null;
+          let targetY = Infinity;
+
+          nodes.forEach((node) => {
+            if (node.dataset.paused) return;
+            const rect = node.getBoundingClientRect();
+            const y = rect.top + rect.height / 2;
+            if (y < center - 16 || y > center + reach) return;
+            if (y < targetY) {
+              target = node;
+              targetY = y;
+            }
+          });
+
+          if (!target) return;
+
+          target.dataset.paused = "1";
+          lockUntil = now + 780;
+          armed = true;
+          event.preventDefault();
+          window.scrollTo({ top: window.scrollY + targetY - center, behavior: "auto" });
+          celebrateMilestone(target);
+        },
+        { passive: false }
+      );
     }
 
     window.addEventListener(
       "scroll",
       () => {
+        armed = true;
         if (ticking) return;
         ticking = true;
         requestAnimationFrame(() => {
           ticking = false;
-          paint();
+          paint(true);
         });
       },
       { passive: true }
     );
+
+    bindMilestonePause();
 
     // Lazy-loaded feature art changes the list height as it arrives, so keep
     // re-measuring instead of trusting the first pass.

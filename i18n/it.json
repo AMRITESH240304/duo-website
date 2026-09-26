@@ -7,7 +7,7 @@
   "nav.founder": "Nota del fondatore",
   "nav.careers": "Lavora con noi",
 
-  "hero.tagline": "Una <span class=\"accent\">linea diretta 🔥</span> per i tuoi cari.",
+  "hero.tagline": "Una <span class=\"accent\">linea diretta <picture class=\"live-emoji\"><source srcset=\"https://fonts.gstatic.com/s/e/notoemoji/latest/1f525/512.webp\" type=\"image/webp\"><img src=\"https://fonts.gstatic.com/s/e/notoemoji/latest/1f525/512.gif\" alt=\"🔥\" width=\"32\" height=\"32\"></picture></span> per i tuoi cari.",
   "hero.sub": "Gruppi privati. Un avviso quando vuoi parlare. Voce dal vivo quando qualcuno è disponibile. Chat per il resto del tempo.",
   "hero.sub2": "Parla all'istante. Niente chiamate. Niente attese. Sempre con le tue persone.",
   "hero.scroll": "scorri",

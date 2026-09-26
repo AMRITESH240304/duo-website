@@ -7,7 +7,7 @@
   "nav.founder": "Notiz des Gründers",
   "nav.careers": "Karriere",
 
-  "hero.tagline": "Eine <span class=\"accent\">Hotline 🔥</span> für deine Lieben.",
+  "hero.tagline": "Eine <span class=\"accent\">Hotline <picture class=\"live-emoji\"><source srcset=\"https://fonts.gstatic.com/s/e/notoemoji/latest/1f525/512.webp\" type=\"image/webp\"><img src=\"https://fonts.gstatic.com/s/e/notoemoji/latest/1f525/512.gif\" alt=\"🔥\" width=\"32\" height=\"32\"></picture></span> für deine Lieben.",
   "hero.sub": "Private Gruppen. Ein Stups, wenn du reden willst. Live-Sprache, wenn jemand da ist. Chat für den Rest der Zeit.",
   "hero.sub2": "Sofort sprechen. Kein Anrufen. Kein Warten. Immer bei deinen Leuten.",
   "hero.scroll": "scrollen",
